@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sat Jun 13 13:18:15 2020
+# Process ID: 6332
+# Current directory: E:/STUDIA/PUF/hdmi1/hdmi1.runs/synth_1
+# Command line: vivado.exe -log top_mine.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_mine.tcl
+# Log file: E:/STUDIA/PUF/hdmi1/hdmi1.runs/synth_1/top_mine.vds
+# Journal file: E:/STUDIA/PUF/hdmi1/hdmi1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_mine.tcl -notrace

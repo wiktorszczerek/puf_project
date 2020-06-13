@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/STUDIA/PUF/hdmi1/hdmi1.sim/sim_1/impl/timing/top_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module generator
+INFO: [VRFC 10-311] analyzing module serializer
+INFO: [VRFC 10-311] analyzing module serializer_0
+INFO: [VRFC 10-311] analyzing module tmds_encoder
+INFO: [VRFC 10-311] analyzing module tmds_encoder_1
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-311] analyzing module glbl

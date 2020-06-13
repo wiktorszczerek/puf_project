@@ -1,0 +1,31 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.5b  2016-09-06 bk=1.3687 VDI=39 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port hdmi_rx_hpa -pg 1 -y -260 -defaultsOSRD
+preplace port sys_clk -pg 1 -y -180 -defaultsOSRD
+preplace port led -pg 1 -y -280 -defaultsOSRD
+preplace port hdmi_tx_clk_n -pg 1 -y -200 -defaultsOSRD
+preplace port hdmi_rx_txen -pg 1 -y -160 -defaultsOSRD
+preplace port hdmi_tx_clk_p -pg 1 -y -180 -defaultsOSRD
+preplace port hdmi_tx_hpd -pg 1 -y -200 -defaultsOSRD
+preplace portBus hdmi_tx_n -pg 1 -y -240 -defaultsOSRD
+preplace portBus hdmi_tx_p -pg 1 -y -220 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -y -250 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -y -220 -defaultsOSRD
+preplace inst top_0 -pg 1 -lvl 3 -y -220 -defaultsOSRD
+preplace netloc sys_clk_1 1 0 2 N -180 130
+preplace netloc top_0_led 1 3 1 NJ
+preplace netloc xlconstant_0_dout 1 1 1 130
+preplace netloc top_0_hdmi_tx_n 1 3 1 NJ
+preplace netloc clk_wiz_0_clk_out1 1 2 1 N
+preplace netloc clk_wiz_0_clk_out2 1 2 1 310
+preplace netloc top_0_hdmi_tx_p 1 3 1 NJ
+preplace netloc hdmi_tx_hpd_1 1 0 3 0J -300 NJ -300 320J
+preplace netloc top_0_hdmi_tx_clk_n 1 3 1 NJ
+preplace netloc top_0_hdmi_rx_txen 1 3 1 NJ
+preplace netloc top_0_hdmi_rx_hpa 1 3 1 NJ
+preplace netloc top_0_hdmi_tx_clk_p 1 3 1 NJ
+levelinfo -pg 1 -20 70 230 430 560 -top -540 -bot 210
+",
+}
+0

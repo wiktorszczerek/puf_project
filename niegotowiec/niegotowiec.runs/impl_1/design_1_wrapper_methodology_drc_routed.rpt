@@ -1,0 +1,114 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.4 (win64) Build 1756540 Mon Jan 23 19:11:23 MST 2017
+| Date         : Sat Jun 13 19:03:48 2020
+| Host         : DESKTOP-MQ85KLP running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7a200tsbg484-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 15
++-----------+----------+----------------------------------------------------+------------+
+| Rule      | Severity | Description                                        | Violations |
++-----------+----------+----------------------------------------------------+------------+
+| TIMING-2  | Warning  | Invalid primary clock source pin                   | 2          |
+| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree | 4          |
+| TIMING-6  | Warning  | No common primary clock between related clocks     | 1          |
+| TIMING-7  | Warning  | No common node between related clocks              | 1          |
+| TIMING-18 | Warning  | Missing input or output delay                      | 7          |
++-----------+----------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-2#1 Warning
+Invalid primary clock source pin  
+A primary clock c is created on an inappropriate pin design_1_i/top_mine_0/inst/clk. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-2#2 Warning
+Invalid primary clock source pin  
+A primary clock p is created on an inappropriate pin design_1_i/top_mine_0/inst/clk_TMDS. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock c is defined downstream of clock clk_out1_design_1_clk_wiz_0_1 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#2 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock c is defined downstream of clock clk_out1_design_1_clk_wiz_0_1_1 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#3 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock p is defined downstream of clock clk_out2_design_1_clk_wiz_0_1 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#4 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock p is defined downstream of clock clk_out2_design_1_clk_wiz_0_1_1 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks c and p are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks c] -to [get_clocks p]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks c and p are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks c] -to [get_clocks p]
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on sw relative to clock(s) c 
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on hdmi_tx_n[0] relative to clock(s) p 
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on hdmi_tx_n[1] relative to clock(s) p 
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on hdmi_tx_n[2] relative to clock(s) p 
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on hdmi_tx_p[0] relative to clock(s) p 
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on hdmi_tx_p[1] relative to clock(s) p 
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on hdmi_tx_p[2] relative to clock(s) p 
+Related violations: <none>
+
+

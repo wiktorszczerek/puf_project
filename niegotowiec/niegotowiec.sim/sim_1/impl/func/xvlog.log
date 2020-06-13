@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/STUDIA/PUF/niegotowiec/niegotowiec.sim/sim_1/impl/func/design_1_wrapper_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_1
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_1design_1_clk_wiz_0_1_clk_wiz
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_generator
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_serializer
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_serializer_0
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_serializer_1
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_tmds_encoder
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_tmds_encoder_2
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_tmds_encoder_3
+INFO: [VRFC 10-311] analyzing module design_1_top_mine_0_0_top_mine
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-311] analyzing module design_1_xlconstant_0_0
+INFO: [VRFC 10-311] analyzing module glbl
