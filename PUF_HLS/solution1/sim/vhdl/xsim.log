@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# xsim v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Apr 27 12:25:34 2020
+# Process ID: 2360
+# Current directory: C:/Users/USER/Desktop/puf/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/image_filter/xsim_script.tcl}
+# Log file: C:/Users/USER/Desktop/puf/solution1/sim/vhdl/xsim.log
+# Journal file: C:/Users/USER/Desktop/puf/solution1/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/image_filter/xsim_script.tcl
+# xsim {image_filter} -autoloadwcfg -tclbatch {image_filter.tcl}
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+source image_filter.tcl
+## run all
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Note: 
+******************************************************
+  renorm_and_round_logic.vhd :
+    FULL_MANT_RND1_DEL is using fast_input
+    which will be faster, but create more FFs.
+******************************************************
+Time: 0 ps  Iteration: 0
+Warning: OPMODE Input Warning : The OPMODE 001XXXX with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 265 ns  Iteration: 16  Process: /apatb_image_filter_top/AESL_inst_image_filter/AddWeighted_U0/image_filter_daddrcU_U63/image_filter_ap_dadd_4_full_dsp_64_u/U0/i_synth/addsub_op/ADDSUB/speed_op/logic/OP/ALIGN_BLK/FRAC_ADDSUB/dsp_add/FRAC_ADDSUB/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: /wrk/2016.4/nightly/2017_01_23_1756540/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 001XXXX with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 265 ns  Iteration: 16  Process: /apatb_image_filter_top/AESL_inst_image_filter/AddWeighted_U0/image_filter_daddrcU_U64/image_filter_ap_dadd_4_full_dsp_64_u/U0/i_synth/addsub_op/ADDSUB/speed_op/logic/OP/ALIGN_BLK/FRAC_ADDSUB/dsp_add/FRAC_ADDSUB/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: /wrk/2016.4/nightly/2017_01_23_1756540/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 51935100 ps  Iteration: 10  Process: /apatb_image_filter_top/AESL_inst_image_filter/AddWeighted_U0/image_filter_dmulsc4_U65/image_filter_ap_dmul_4_max_dsp_64_u/U0/i_synth/mult/OP/R_AND_R/logic/R_AND_R/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: /wrk/2016.4/nightly/2017_01_23_1756540/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 51935100 ps  Iteration: 10  Process: /apatb_image_filter_top/AESL_inst_image_filter/AddWeighted_U0/image_filter_dmulsc4_U66/image_filter_ap_dmul_4_max_dsp_64_u/U0/i_synth/mult/OP/R_AND_R/logic/R_AND_R/dsp48_e1/dsp48e1_add/DSP48E1_ADD/DSP/prcs_opmode_drc  File: /wrk/2016.4/nightly/2017_01_23_1756540/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Note: simulation done!
+Time: 9491175 ns  Iteration: 1  Process: /apatb_image_filter_top/generate_sim_done_proc  File: C:/Users/USER/Desktop/puf/solution1/sim/vhdl/image_filter.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 9491175 ns  Iteration: 1  Process: /apatb_image_filter_top/generate_sim_done_proc  File: C:/Users/USER/Desktop/puf/solution1/sim/vhdl/image_filter.autotb.vhd
+$finish called at time : 9491175 ns
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:13:02 . Memory (MB): peak = 207.949 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Apr 27 12:38:46 2020...

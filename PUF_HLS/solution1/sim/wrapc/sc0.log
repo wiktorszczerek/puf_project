@@ -1,0 +1,5 @@
+   Build using "C:/Xilinx/Vivado_HLS/2016.4/msys/bin/g++.exe"
+   Compiling apatb_image_filter.cpp
+   Compiling main.cpp_pre.cpp.tb.cpp
+   Compiling tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

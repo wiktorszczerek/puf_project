@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 10 12:53:47 2020" VIVADOVERSION="2016.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jun 15 19:17:01 2020" VIVADOVERSION="2016.4">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys_video:part0:1.1" DEVICE="7a200t" NAME="design_1" PACKAGE="sbg484" SPEEDGRADE="-1"/>
 
@@ -12,6 +12,12 @@
     <PORT DIR="O" NAME="hdmi_out_clk_n" SIGIS="undef"/>
     <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_p" RIGHT="0" SIGIS="undef"/>
     <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_n" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="DDC_scl_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="DDC_scl_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="DDC_scl_t" SIGIS="undef"/>
+    <PORT DIR="I" NAME="DDC_sda_i" SIGIS="undef"/>
+    <PORT DIR="O" NAME="DDC_sda_o" SIGIS="undef"/>
+    <PORT DIR="O" NAME="DDC_sda_t" SIGIS="undef"/>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
@@ -27,12 +33,6 @@
         <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="DDC_scl_i" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_scl_o" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_scl_t" SIGIS="undef"/>
-    <PORT DIR="I" NAME="DDC_sda_i" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_sda_o" SIGIS="undef"/>
-    <PORT DIR="O" NAME="DDC_sda_t" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -661,7 +661,7 @@
     </MODULE>
     <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.7" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.7">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="e:/Downloads/Nexys-Video-HDMI-2016.4-2/Nexys-Video-HDMI/repo/vivado-library/ip/dvi2rgb_v1_7/docs/dvi2rgb.pdf"/>
+        <DOCUMENT SOURCE="e:/STUDIA/PUF/puf_projekt_main/puf_project/Nexys-Video-HDMI/repo/vivado-library/ip/dvi2rgb_v1_7/docs/dvi2rgb.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
@@ -914,7 +914,7 @@
     </MODULE>
     <MODULE FULLNAME="/rgb2dvi_0" HWVERSION="1.3" INSTANCE="rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.3">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="e:/Downloads/Nexys-Video-HDMI-2016.4-2/Nexys-Video-HDMI/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
+        <DOCUMENT SOURCE="e:/STUDIA/PUF/puf_projekt_main/puf_project/Nexys-Video-HDMI/repo/vivado-library/ip/rgb2dvi/docs/rgb2dvi.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="true"/>
@@ -1588,8 +1588,8 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hpa"/>
             <CONNECTION INSTANCE="External_Ports" PORT="txen"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="hpa"/>
             <CONNECTION INSTANCE="image_filter_0" PORT="ap_start"/>
             <CONNECTION INSTANCE="image_filter_0" PORT="ap_rst_n"/>
           </CONNECTIONS>

@@ -1,0 +1,182 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'image_filter'" level="0">
+<item name = "Date">Sun May  3 00:01:07 2020
+</item>
+<item name = "Version">2019.2 (Build 2698951 on Thu Oct 24 19:15:34 MDT 2019)</item>
+<item name = "Project">puf</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200t-sbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 11.000 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">930674, 943940, 10.237 ms, 10.383 ms, 930661, 943922, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="AddWeighted_U0">AddWeighted, 1, 943921, 11.000 ns, 10.383 ms, 1, 943921, none</column>
+<column name="Sobel_U0">Sobel, 930660, 930660, 10.237 ms, 10.237 ms, 930660, 930660, none</column>
+<column name="Sobel_1_U0">Sobel_1, 930660, 930660, 10.237 ms, 10.237 ms, 930660, 930660, none</column>
+<column name="GaussianBlur_U0">GaussianBlur, 930660, 930660, 10.237 ms, 10.237 ms, 930660, 930660, none</column>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 3, 925203, 33.000 ns, 10.177 ms, 3, 925203, none</column>
+<column name="CvtColor_1_U0">CvtColor_1, 1, 925921, 11.000 ns, 10.185 ms, 1, 925921, none</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 924481, 924481, 10.169 ms, 10.169 ms, 924481, 924481, none</column>
+<column name="CvtColor_U0">CvtColor, 1, 923761, 11.000 ns, 10.161 ms, 1, 923761, none</column>
+<column name="Duplicate_U0">Duplicate, 923761, 923761, 10.161 ms, 10.161 ms, 923761, 923761, none</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 34, -</column>
+<column name="FIFO">0, -, 107, 408, -</column>
+<column name="Instance">9, 35, 5900, 9617, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 36, -</column>
+<column name="Register">-, -, 6, -, -</column>
+<specialColumn name="Available">730, 740, 269200, 134600, 0</specialColumn>
+<specialColumn name="Utilization (%)">1, 4, 2, 7, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="AXIvideo2Mat_U0">AXIvideo2Mat, 0, 0, 325, 445, 0</column>
+<column name="AddWeighted_U0">AddWeighted, 0, 28, 3667, 4686, 0</column>
+<column name="Block_proc_U0">Block_proc, 0, 0, 3, 56, 0</column>
+<column name="CvtColor_U0">CvtColor, 0, 0, 63, 203, 0</column>
+<column name="CvtColor_1_U0">CvtColor_1, 0, 3, 238, 267, 0</column>
+<column name="Duplicate_U0">Duplicate, 0, 0, 40, 176, 0</column>
+<column name="GaussianBlur_U0">GaussianBlur, 3, 4, 497, 1076, 0</column>
+<column name="Mat2AXIvideo_U0">Mat2AXIvideo, 0, 0, 43, 198, 0</column>
+<column name="Sobel_U0">Sobel, 3, 0, 512, 1255, 0</column>
+<column name="Sobel_1_U0">Sobel_1, 3, 0, 512, 1255, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="img_0_cols_V_c23_U">0, 5, 0, -, 2, 12, 24</column>
+<column name="img_0_cols_V_c_U">0, 5, 0, -, 2, 12, 24</column>
+<column name="img_0_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_0_data_stream_1_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_0_data_stream_2_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_0_rows_V_c22_U">0, 5, 0, -, 2, 11, 22</column>
+<column name="img_0_rows_V_c_U">0, 5, 0, -, 2, 11, 22</column>
+<column name="img_1_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_2_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_2a_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_2b_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_3_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_4_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_5_cols_V_c25_U">0, 5, 0, -, 2, 12, 24</column>
+<column name="img_5_cols_V_c_U">0, 6, 0, -, 7, 12, 84</column>
+<column name="img_5_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_5_rows_V_c24_U">0, 5, 0, -, 2, 11, 22</column>
+<column name="img_5_rows_V_c_U">0, 6, 0, -, 7, 11, 77</column>
+<column name="img_6_data_stream_0_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_6_data_stream_1_U">0, 5, 0, -, 2, 8, 16</column>
+<column name="img_6_data_stream_2_U">0, 5, 0, -, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="AXIvideo2Mat_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="Block_proc_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="AXIvideo2Mat_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Block_proc_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Duplicate_U0_start_full_n">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_AXIvideo2Mat_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_Block_proc_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="AXIvideo2Mat_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="Block_proc_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="ap_sync_reg_AXIvideo2Mat_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_Block_proc_U0_ap_ready">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="AXIvideo2Mat_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="Block_proc_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="ap_sync_reg_AXIvideo2Mat_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_Block_proc_U0_ap_ready">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="INPUT_STREAM_TDATA">in, 24, axis, INPUT_STREAM_V_data_V, pointer</column>
+<column name="INPUT_STREAM_TKEEP">in, 3, axis, INPUT_STREAM_V_keep_V, pointer</column>
+<column name="INPUT_STREAM_TSTRB">in, 3, axis, INPUT_STREAM_V_strb_V, pointer</column>
+<column name="INPUT_STREAM_TUSER">in, 1, axis, INPUT_STREAM_V_user_V, pointer</column>
+<column name="INPUT_STREAM_TLAST">in, 1, axis, INPUT_STREAM_V_last_V, pointer</column>
+<column name="INPUT_STREAM_TID">in, 1, axis, INPUT_STREAM_V_id_V, pointer</column>
+<column name="INPUT_STREAM_TDEST">in, 1, axis, INPUT_STREAM_V_dest_V, pointer</column>
+<column name="INPUT_STREAM_TVALID">in, 1, axis, INPUT_STREAM_V_dest_V, pointer</column>
+<column name="INPUT_STREAM_TREADY">out, 1, axis, INPUT_STREAM_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TDATA">out, 24, axis, OUTPUT_STREAM_V_data_V, pointer</column>
+<column name="OUTPUT_STREAM_TKEEP">out, 3, axis, OUTPUT_STREAM_V_keep_V, pointer</column>
+<column name="OUTPUT_STREAM_TSTRB">out, 3, axis, OUTPUT_STREAM_V_strb_V, pointer</column>
+<column name="OUTPUT_STREAM_TUSER">out, 1, axis, OUTPUT_STREAM_V_user_V, pointer</column>
+<column name="OUTPUT_STREAM_TLAST">out, 1, axis, OUTPUT_STREAM_V_last_V, pointer</column>
+<column name="OUTPUT_STREAM_TID">out, 1, axis, OUTPUT_STREAM_V_id_V, pointer</column>
+<column name="OUTPUT_STREAM_TDEST">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TVALID">out, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
+<column name="OUTPUT_STREAM_TREADY">in, 1, axis, OUTPUT_STREAM_V_dest_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, image_filter, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, image_filter, return value</column>
+</table>
+</item>
+</section>
+</profile>

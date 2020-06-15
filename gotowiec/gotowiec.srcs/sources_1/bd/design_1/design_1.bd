@@ -312,8 +312,8 @@
       <spirit:adHocConnection>
         <spirit:name>xlconstant_1_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconstant_1" spirit:portRef="dout"/>
-        <spirit:externalPortReference spirit:portRef="hpa"/>
         <spirit:externalPortReference spirit:portRef="txen"/>
+        <spirit:externalPortReference spirit:portRef="hpa"/>
         <spirit:internalPortReference spirit:componentRef="image_filter_0" spirit:portRef="ap_start"/>
         <spirit:internalPortReference spirit:componentRef="image_filter_0" spirit:portRef="ap_rst_n"/>
       </spirit:adHocConnection>

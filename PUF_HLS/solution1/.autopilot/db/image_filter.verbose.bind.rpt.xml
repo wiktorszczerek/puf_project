@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'image_filter'" level="0">
+<item name = "Date">Sun May  3 00:00:51 2020
+</item>
+<item name = "Version">2019.2 (Build 2698951 on Thu Oct 24 19:15:34 MDT 2019)</item>
+<item name = "Project">puf</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200t-sbg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 11.000 ns, 1.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">930674, 943940, 10.237 ms, 10.383 ms, 930661, 943922, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_AddWeighted_fu_502">AddWeighted, 1, 943921, 11.000 ns, 10.383 ms, 1, 943921, none</column>
+<column name="grp_Sobel_fu_513">Sobel, 930660, 930660, 10.237 ms, 10.237 ms, 930660, 930660, none</column>
+<column name="grp_Sobel_1_fu_519">Sobel_1, 930660, 930660, 10.237 ms, 10.237 ms, 930660, 930660, none</column>
+<column name="grp_GaussianBlur_fu_525">GaussianBlur, 930660, 930660, 10.237 ms, 10.237 ms, 930660, 930660, none</column>
+<column name="grp_AXIvideo2Mat_fu_531">AXIvideo2Mat, 3, 925203, 33.000 ns, 10.177 ms, 3, 925203, none</column>
+<column name="grp_CvtColor_1_fu_556">CvtColor_1, 1, 925921, 11.000 ns, 10.185 ms, 1, 925921, none</column>
+<column name="grp_Mat2AXIvideo_fu_566">Mat2AXIvideo, 924481, 924481, 10.169 ms, 10.169 ms, 924481, 924481, none</column>
+<column name="grp_CvtColor_fu_587">CvtColor, 1, 923761, 11.000 ns, 10.161 ms, 1, 923761, none</column>
+<column name="grp_Duplicate_fu_597">Duplicate, 923761, 923761, 10.161 ms, 10.161 ms, 923761, 923761, none</column>
+<column name="call_ln0_Block_proc_fu_604">Block_proc, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -282,23 +282,23 @@ preplace inst rgb2dvi_0 -pg 1 -lvl 7 -y 220 -defaultsOSRD
 preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 4 -y 290 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 180 -defaultsOSRD
 preplace inst dvi2rgb_0 -pg 1 -lvl 3 -y 260 -defaultsOSRD
-preplace netloc xlconstant_1_dout 1 4 4 930 -170 NJ -170 NJ -170 1750
-preplace netloc v_vid_in_axi4s_0_video_out 1 4 1 920
-preplace netloc clk_wiz_0_locked 1 2 5 430 170 NJ 170 NJ 170 NJ 170 1570
-preplace netloc v_axi4s_vid_out_0_vid_io_out 1 6 1 1550
+preplace netloc xlconstant_1_dout 1 4 4 940 -170 NJ -170 NJ -170 1770
+preplace netloc v_vid_in_axi4s_0_video_out 1 4 1 930
+preplace netloc clk_wiz_0_locked 1 2 5 430 170 NJ 170 NJ 170 NJ 170 1580
+preplace netloc v_axi4s_vid_out_0_vid_io_out 1 6 1 1560
 preplace netloc sys_clock_1 1 0 2 -210J 210 140
-preplace netloc rgb2dvi_0_TMDS 1 7 1 1750
+preplace netloc rgb2dvi_0_TMDS 1 7 1 1770
 preplace netloc hdmi_in_1 1 0 3 NJ 240 NJ 240 440
 preplace netloc dvi2rgb_0_DDC 1 3 5 660 20 NJ 20 NJ 20 NJ 20 NJ
-preplace netloc v_axi4s_vid_out_0_vtg_ce 1 4 3 940 150 NJ 150 1540
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 4 3 950 150 NJ 150 1550
 preplace netloc xlconstant_0_dout 1 1 1 140
 preplace netloc clk_wiz_0_clk_out1 1 2 1 420
-preplace netloc image_filter_0_OUTPUT_STREAM 1 5 1 1300
-preplace netloc v_tc_0_vtiming_out 1 5 1 1320
-preplace netloc v_vid_in_axi4s_0_vtiming_out 1 4 1 900
+preplace netloc image_filter_0_OUTPUT_STREAM 1 5 1 1310
+preplace netloc v_tc_0_vtiming_out 1 5 1 1330
+preplace netloc v_vid_in_axi4s_0_vtiming_out 1 4 1 910
 preplace netloc dvi2rgb_0_RGB 1 3 1 680
-preplace netloc dvi2rgb_0_PixelClk 1 3 4 670 180 910 180 1310 180 1560
-levelinfo -pg 1 -230 80 340 560 790 1120 1430 1660 1770 -top -480 -bot 750
+preplace netloc dvi2rgb_0_PixelClk 1 3 4 670 180 920 180 1320 180 1570
+levelinfo -pg 1 -230 80 340 560 800 1130 1440 1680 1800 -top -480 -bot 750
 ",
 }
 

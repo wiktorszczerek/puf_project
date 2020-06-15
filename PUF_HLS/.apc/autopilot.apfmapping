@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="main.cpp" path="C:\Users\USER\Desktop\puf\main.cpp"/>
+    <originFiles name="cvt_colour.hpp" path="C:\Users\USER\Desktop\puf\cvt_colour.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test.bmp" path="C:\Users\USER\Desktop\puf\test.bmp"/>
+    <originFiles name="tb.cpp" path="C:\Users\USER\Desktop\puf\tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
