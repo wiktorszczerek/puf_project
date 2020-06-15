@@ -1,6 +1,3 @@
-// (c) fpga4fun.com & KNJN LLC 2013
-
-////////////////////////////////////////////////////////////////////////
 module top_mine(
 	input clk,  // 25MHz
 	input clk_TMDS,
@@ -37,33 +34,11 @@ OBUFDS OBUFDS_blue (.I(TMDS_shift_blue [0]), .O(hdmi_tx_p[0]), .OB(hdmi_tx_n[0])
 OBUFDS OBUFDS_clock(.I(clk), .O(hdmi_tx_clk_p), .OB(hdmi_tx_clk_n));
 endmodule
 
-////serializer
-//module serializer(
-//    input clk,
-//    input clk_TMDS,
-//    input[9:0] data_in,
-//    output reg data_out
-//);
-
-//reg[9:0] data_reg;
-//always @(posedge clk) begin
-//    data_reg <= data_in;
-//end
-
-//reg[4:0] counter =4'd0;
-
-//always @(posedge clk_TMDS)
-//begin
-//	data_out <= data_reg[counter];
-//	if(counter == 4'd9) counter = 4'd0;
-//	else counter = counter +1;
-//end
-
-//endmodule
 
 
-
-//generator
+/**
+*   Modu³ generatora. Na sztywno zaimplementowane jest wysy³anie sygna³u poziomych pasków RGB albo pionowych pasków CMY z gradientami wype³nienia (czarny-kolor)
+*/
 module generator(
     input clk,
     input sw,
@@ -79,6 +54,7 @@ always @(posedge clk) if(CounterX==799) CounterY <= (CounterY==524) ? 0 : Counte
 
 always @(posedge clk) hSync <= (CounterX>=656) && (CounterX<752);
 always @(posedge clk) vSync <= (CounterY>=490) && (CounterY<492);
+
 
 always @(posedge clk) begin
     if(sw == 1) begin
@@ -112,18 +88,13 @@ always @(posedge clk) begin
     end
 end
 
-////////////////
-//wire [7:0] W = {8{CounterX[7:0]==CounterY[7:0]}};
-//wire [7:0] A = {8{CounterX[7:5]==3'h2 && CounterY[7:5]==3'h2}};
-//always @(posedge clk) red <= ({CounterX[5:0] & {6{CounterY[4:3]==~CounterX[4:3]}}, 2'b00} | W) & ~A;
-//always @(posedge clk) green <= (CounterX[7:0] & {8{CounterY[6]}} | W) & ~A;
-//always @(posedge clk) blue <= CounterY[7:0] | W | A;
-
 
 
 endmodule
 
-//enkoder
+/**
+* Enkoder TMDS zgodny z algorytmem ze standardu.
+*/
 module TMDS_encoder(
 	input clk,
 	input [7:0] VD,  // video data (red, green or blue)
@@ -131,6 +102,7 @@ module TMDS_encoder(
 	input VDE,  // video data enable, to choose between CD (when VDE=0) and VD (when VDE=1)
 	output reg [9:0] TMDS = 0
 );
+
 
 wire [3:0] Nb1s = VD[0] + VD[1] + VD[2] + VD[3] + VD[4] + VD[5] + VD[6] + VD[7];
 wire XNOR = (Nb1s>4'd4) || (Nb1s==4'd4 && VD[0]==1'b0);

@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Jun 15 19:26:00 2020">
+<application name="pa" timeStamp="Mon Jun 15 20:13:27 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="d89d67032c6144beb6154376a6aa7546" type="ProjectID"/>
 <property name="ProjectIteration" value="40" type="ProjectIteration"/>
@@ -88,7 +88,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ExpRunPropPanels_CONSTRAINTS" value="1" type="GuiResourceData"/>
 <property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="3" type="GuiResourceData"/>
 <property name="FileSetPanel_0_WARNING" value="3" type="GuiResourceData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="175" type="GuiResourceData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="177" type="GuiResourceData"/>
 <property name="FloatingTopDialog_SELECT_TOP_MODULE_OF_YOUR_DESIGN" value="2" type="GuiResourceData"/>
 <property name="FloatingTopDialog_SPECIFY_NEW_TOP_MODULE" value="2" type="GuiResourceData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="182" type="GuiResourceData"/>
@@ -157,7 +157,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PAViews_DEVICE" value="1" type="GuiResourceData"/>
 <property name="PAViews_PACKAGE" value="1" type="GuiResourceData"/>
 <property name="PAViews_PACKAGE_IP" value="6" type="GuiResourceData"/>
-<property name="PAViews_PROJECT_SUMMARY" value="4" type="GuiResourceData"/>
+<property name="PAViews_PROJECT_SUMMARY" value="5" type="GuiResourceData"/>
 <property name="PAViews_SCHEMATIC" value="14" type="GuiResourceData"/>
 <property name="PAViews_SYSTEM" value="2" type="GuiResourceData"/>
 <property name="PackagerStepsPanel_PACKAGER_STEPS_LIST" value="5" type="GuiResourceData"/>
@@ -219,9 +219,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="152" type="GuiResourceData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="21" type="GuiMode"/>
+<property name="GuiMode" value="22" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="19" type="TclMode"/>
+<property name="TclMode" value="20" type="TclMode"/>
 </item>
 </section>
 </application>
