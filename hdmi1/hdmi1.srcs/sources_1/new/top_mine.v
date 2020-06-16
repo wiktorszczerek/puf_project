@@ -1,25 +1,42 @@
+
+/**
+* Modu³ top, zawieraj¹cy instancje innych modu³ów, implementuj¹cy po³¹czenia miêdzy portami oraz modu³ami.
+*/
 module top_mine(
-	input clk,  // 25MHz
-	input clk_TMDS,
-	input sw,
-	output [2:0] hdmi_tx_p, hdmi_tx_n,
-	output hdmi_tx_clk_p, hdmi_tx_clk_n
+	input clk,                             // 25MHz
+	input clk_TMDS,                        //10*clk
+	input sw,                              //switch do prze³¹czania miêdzy klatkami
+	output [2:0] hdmi_tx_p, hdmi_tx_n,     //3 kana³y (w parach ró¿nicowych) TMDS
+	output hdmi_tx_clk_p, hdmi_tx_clk_n    //para ró¿nicowa dla zegaru TMDS
 );
 
+//trzy kana³y RGB, wyjœcie z generatora.
 wire [7:0] red_data,green_data,blue_data;
+//trzy sygna³y do synchronizacji: vsynvc -> poczatek linii, hsync -> koniec obrazu, draw_area -> flaga "display_enable"
 wire hsync,vsync,draw_area;
+//inicjalizacja modu³u generatora.
 generator gen(.clk(clk),.red(red_data),.green(green_data),.blue(blue_data),.hSync(hsync),.vSync(vsync),.DrawArea(draw_area),.sw(sw));
 
+//sygna³y wyjœciowe TMDS
 wire [9:0] TMDS_red, TMDS_green, TMDS_blue;
+//inicjalizacja modu³ów enkoderów dla poszczególnych kolorów. Kana³ niebieski przechowuje informacje synchronizacji.
 TMDS_encoder encode_R(.clk(clk), .VD(red_data  ), .CD(2'b00)        , .VDE(draw_area), .TMDS(TMDS_red));
 TMDS_encoder encode_G(.clk(clk), .VD(green_data), .CD(2'b00)        , .VDE(draw_area), .TMDS(TMDS_green));
 TMDS_encoder encode_B(.clk(clk), .VD(blue_data), .CD({vsync,hsync}), .VDE(draw_area), .TMDS(TMDS_blue));
 
-reg [3:0] TMDS_mod10=0;  // modulus 10 counter
+//Serializer.
+//licznik modulo 10
+reg [3:0] TMDS_mod10=0;
+//Rejestry przesuwne dla serializera.
 reg [9:0] TMDS_shift_red=0, TMDS_shift_green=0, TMDS_shift_blue=0;
+//Flaga ³adowania nowych danych do serializera.
 reg TMDS_shift_load=0;
+//Ustawienie flagi na zboczu zegara TMDS po przekroczeniu licznika modulo 10. Jest to sygna³ ¿e wszystkie bity w wektorze 9:0 TMDS (czyli ca³y zakodowany
+//bajt RGB) zosta³y wys³ane i mo¿na pobraæ kolejny.
 always @(posedge clk_TMDS) TMDS_shift_load <= (TMDS_mod10==4'd9);
 
+//Implementacja zachowania rejestru przesuwnego dla ka¿dego kana³u. Je¿eli wys³aliœmy wszystko w danej paczce, pobierana jest kolejna paczka. Je¿eli nie ->
+//przesuwamy o jeden w prawo. Wysy³amy tylko bit na poziomie [0] w danym tykniêciu zegara TMDS.
 always @(posedge clk_TMDS)
 begin
 	TMDS_shift_red   <= TMDS_shift_load ? TMDS_red   : TMDS_shift_red  [9:1];
@@ -28,6 +45,7 @@ begin
 	TMDS_mod10 <= (TMDS_mod10==4'd9) ? 4'd0 : TMDS_mod10+4'd1;
 end
 
+//Bufory wyjœciowe dla par ró¿nicowych -> generacja takowych z pojedynczego sygna³u.
 OBUFDS OBUFDS_red  (.I(TMDS_shift_red  [0]), .O(hdmi_tx_p[2]), .OB(hdmi_tx_n[2]));
 OBUFDS OBUFDS_green(.I(TMDS_shift_green[0]), .O(hdmi_tx_p[1]), .OB(hdmi_tx_n[1]));
 OBUFDS OBUFDS_blue (.I(TMDS_shift_blue [0]), .O(hdmi_tx_p[0]), .OB(hdmi_tx_n[0]));
@@ -37,7 +55,7 @@ endmodule
 
 
 /**
-*   Modu³ generatora. Na sztywno zaimplementowane jest wysy³anie sygna³u poziomych pasków RGB albo pionowych pasków CMY z gradientami wype³nienia (czarny-kolor)
+*   Modu³ generatora. Na sztywno zaimplementowane jest wysy³anie sygna³u poziomych pasków RGB albo pionowych pasków CYM z gradientami wype³nienia (czarny-kolor)
 */
 module generator(
     input clk,
@@ -57,7 +75,8 @@ always @(posedge clk) vSync <= (CounterY>=490) && (CounterY<492);
 
 
 always @(posedge clk) begin
-    if(sw == 1) begin
+    if(sw == 1) begin 
+        //RGB
         if(CounterY >=0 && CounterY < 150) begin
             red<= 8'b11111111;
             green<= 8'b00000000;
@@ -72,6 +91,7 @@ always @(posedge clk) begin
             blue<= 8'b11111111;
         end
     end else begin
+        //CYM
         if(CounterX >=0 && CounterX < 210) begin
             red<= CounterX % 256;
             green<= 8'b00000000;
@@ -96,11 +116,11 @@ endmodule
 * Enkoder TMDS zgodny z algorytmem ze standardu.
 */
 module TMDS_encoder(
-	input clk,
-	input [7:0] VD,  // video data (red, green or blue)
-	input [1:0] CD,  // control data
-	input VDE,  // video data enable, to choose between CD (when VDE=0) and VD (when VDE=1)
-	output reg [9:0] TMDS = 0
+	input clk,         //wejœcie zegara o taktowaniu odpowiednim dla zadanej rozdzielczoœci
+	input [7:0] VD,    //Dane obrazu wejœciowe (jeden kana³)
+	input [1:0] CD,    //Dane kontrolne (np. vsync, hsync) albo sztywny wektor.
+	input VDE,         //display_enable -> tryb wysy³ki danych/wysy³ki zakodowanych informacji technicznych
+	output reg [9:0] TMDS = 0  //wyjœcie TMDS
 );
 
 

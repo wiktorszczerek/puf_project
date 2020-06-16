@@ -1,0 +1,168 @@
+/*
+
+Vivado v2016.4 (64-bit)
+SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+Process ID: 12424
+
+Current time: 	6/16/20 8:58:51 AM CEST
+Time zone: 	Central European Time (Europe/Belgrade)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1200
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.4/tps/win64/jre
+
+User name: 	wszcz
+User home directory: C:/Users/wszcz
+User working directory: E:/STUDIA/PUF/puf_projekt_main/puf_project/hdmi1
+User country: 	PL
+User language: 	pl
+User locale: 	pl_PL
+
+RDI base root directory: C:/Xilinx/Vivado
+RDI data directory: C:/Xilinx/Vivado/2016.4/data
+RDI bin directory: C:/Xilinx/Vivado/2016.4/bin
+
+Vivado preferences path: C:/Users/wszcz/AppData/Roaming/Xilinx/Vivado/2016.4/vivado.ini
+Vivado layouts directory: C:/Users/wszcz/AppData/Roaming/Xilinx/Vivado/2016.4/layouts
+
+GUI allocated memory:	205 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 495 MB
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: E:\STUDIA\PUF\puf_projekt_main\puf_project\hdmi1\hdmi1.xpr. Version: Vivado v2016.4 
+// bt:g (cd:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project E:/STUDIA/PUF/puf_projekt_main/puf_project/hdmi1/hdmi1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'E:/STUDIA/PUF/hdmi1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/STUDIA/PUF/puf_projekt_main/puf_project/hdmi1/hdmi1.srcs'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 72 MB (+72922kb) [00:00:05]
+// [Engine Memory]: 437 MB (+306448kb) [00:00:05]
+// [Engine Memory]: 476 MB (+18058kb) [00:00:05]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.4/data/ip'. 
+// Project name: hdmi1; location: E:/STUDIA/PUF/puf_projekt_main/puf_project/hdmi1; part: xc7a200tsbg484-1
+dismissDialog("Open Project"); // bt:g (cd:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 499 MB. GUI used memory: 36 MB. Current time: 6/16/20 8:58:52 AM CEST
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [Engine Memory]: 501 MB (+1873kb) [00:00:09]
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_mine (top_mine.v)]", 1); // y:i (D:JPanel, cd:JFrame)
+// PAPropertyPanels.initPanels (top_mine.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_mine (top_mine.v)]", 1, true); // y:i (D:JPanel, cd:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_mine (top_mine.v)]", 1, true, false, false, false, false, true); // y:i (D:JPanel, cd:JFrame) - Double Click - Node
+selectCodeEditor("top_mine.v", 31, 57); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 27 seconds
+selectCodeEditor("top_mine.v", 170, 79); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 199, 121); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 18 seconds
+selectCodeEditor("top_mine.v", 341, 129); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 18 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_mine.v", 487, 158); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 311, 199); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 379, 212); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 76 MB (+557kb) [00:03:59]
+// Elapsed time: 123 seconds
+selectCodeEditor("top_mine.v", 324, 260); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 339, 248); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 340, 249); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 37 seconds
+selectCodeEditor("top_mine.v", 824, 263); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 247, 309); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 329, 351); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 80 MB (+454kb) [00:05:14]
+// Elapsed time: 36 seconds
+selectCodeEditor("top_mine.v", 521, 439); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 11 seconds
+selectCodeEditor("top_mine.v", 395, 469); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 22 seconds
+selectCodeEditor("top_mine.v", 545, 443); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 237, 385); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 376, 497); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 85 MB (+575kb) [00:06:28]
+// Elapsed time: 36 seconds
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 521 MB. GUI used memory: 41 MB. Current time: 6/16/20 9:06:08 AM CEST
+// Elapsed time: 26 seconds
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "top_mine.v", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 301, 536); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey((HResource) null, "top_mine.v", 'c'); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 399, 548); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 478, 564); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 24 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 19 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 57 seconds
+selectCodeEditor("top_mine.v", 490, 583); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey(null, null, 'z');
+// Elapsed time: 29 seconds
+selectCodeEditor("top_mine.v", 211, 292); // bF:I (JPanel:JComponent, cd:JFrame)
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_mine.v", 282, 418); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 206, 452); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 90 MB (+1220kb) [00:10:23]
+selectCodeEditor("top_mine.v", 207, 711); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 833, 112); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 537, 480); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 652, 368); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 252, 348); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 391, 327); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 41 seconds
+selectCodeEditor("top_mine.v", 350, 333); // bF:I (JPanel:JComponent, cd:JFrame)
+// [Engine Memory]: 527 MB (+920kb) [00:11:36]
+// Elapsed time: 182 seconds
+selectCodeEditor("top_mine.v", 161, 504); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 177, 507); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 203, 508); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 201, 519); // bF:I (JPanel:JComponent, cd:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 20 seconds
+selectCodeEditor("top_mine.v", 103, 521); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 103, 521, false, false, false, false, true); // bF:I (JPanel:JComponent, cd:JFrame) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("top_mine.v", 541, 546); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 10 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "4'd4"); // l:ak (au:e, cd:JFrame)
+selectCodeEditor("top_mine.v", 617, 514); // bF:I (JPanel:JComponent, cd:JFrame)
+// [GUI Memory]: 96 MB (+1014kb) [00:15:13]
+selectCodeEditor("top_mine.v", 530, 575); // bF:I (JPanel:JComponent, cd:JFrame)
+// Elapsed time: 613 seconds
+selectCodeEditor("top_mine.v", 423, 498); // bF:I (JPanel:JComponent, cd:JFrame)
+selectCodeEditor("top_mine.v", 428, 515); // bF:I (JPanel:JComponent, cd:JFrame)
